@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Noodle | Homepage</title>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!--  -->
+    <!-- Top navigation bar -->
+    <header class="top-nav">
+        <div class="logo">
+            <span class="logo-mark">N</span>
+            <div>
+                <strong>Noodle</strong>
+                <small>Your learning, organised</small>
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Courses</a>
+            <a href="#">Assignments</a>
+            <a href="#">Resources</a>
+        </nav>
+
+        <div class="profile">
+            <span class="profile-circle">I</span>
+            <!-- Hardcoded user name for now, but can change later -->
+            <span>Isabel</span>
+        </div>
+    </header>
+
+    <!-- Main dashboard -->
+    <main class="dashboard">
+
+        <!-- Welcome section -->
+        <section class="hero-card">
+            <div class="hero-text">
+                <p class="eyebrow">Student homepage</p>
+                <h1>Welcome back, Isabel 👋</h1>
+                <p>
+                    Noodle brings your courses, homework, assignments, and important resources
+                    into one organised space.
+                </p>
+
+                <div class="hero-actions">
+                    <button id="focusButton">View urgent work</button>
+                    <button class="secondary-button" id="courseButton">Open Agile course</button>
+                </div>
+            </div>
+
+            <div class="today-focus">
+                <h2>Today’s Focus</h2>
+                <ul>
+                    <li>
+                        <span class="dot urgent-dot"></span>
+                        Finish homepage prototype
+                    </li>
+                    <li>
+                        <span class="dot warning-dot"></span>
+                        Prepare Monday stand-up update
+                    </li>
+                    <li>
+                        <span class="dot calm-dot"></span>
+                        Review story points vs priority
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Summary cards -->
+        <section class="summary-grid">
+            <article class="summary-card">
+                <span class="summary-number">3</span>
+                <p>Enrolled courses</p>
+            </article>
+
+            <article class="summary-card">
+                <span class="summary-number">5</span>
+                <p>Upcoming tasks</p>
+            </article>
+
+            <article class="summary-card">
+                <span class="summary-number">2</span>
+                <p>Assignments due soon</p>
+            </article>
+
+            <article class="summary-card">
+                <span class="summary-number">4</span>
+                <p>Important resources</p>
+            </article>
+        </section>
+
+        <!-- Continue learning -->
+        <section class="continue-card">
+            <div>
+                <p class="eyebrow">Continue learning</p>
+                <h2>Topic 5: Agile Estimation and Planning Poker</h2>
+                <p>
+                    Last opened: Story points, task estimates, and sprint planning notes.
+                </p>
+            </div>
+
+            <button id="continueButton">Continue</button>
+        </section>
+
+        <!-- Courses -->
+        <section class="section-block">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Browse courses</p>
+                    <h2>My Courses</h2>
+                </div>
+
+                <input type="text" id="courseSearch" placeholder="Search courses..." aria-label="Search courses">
+            </div>
+
+            <div class="course-grid">
+
+                <article class="course-card" data-course-card>
+                    <div class="course-top">
+                        <span class="course-code">ISCG7427</span>
+                        <span class="badge must-have">Must focus</span>
+                    </div>
+                    <h3>Agile and Lean Software Delivery</h3>
+                    <p>
+                        User stories, sprint planning, stand-ups, retrospectives, and prototype evidence.
+                    </p>
+                    <div class="progress-area">
+                        <span>Progress</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill progress-7427"></div>
+                        </div>
+                    </div>
+                    <button class="open-course-btn" data-course="ISCG7427">Open course</button>
+                </article>
+
+                <article class="course-card" data-course-card>
+                    <div class="course-top">
+                        <span class="course-code">ISCG7420</span>
+                        <span class="badge normal">In progress</span>
+                    </div>
+                    <h3>Web Application Development</h3>
+                    <p>
+                        Django, templates, views, routing, databases, and deployment practice.
+                    </p>
+                    <div class="progress-area">
+                        <span>Progress</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill progress-7420"></div>
+                        </div>
+                    </div>
+                    <button class="open-course-btn" data-course="ISCG7420">Open course</button>
+                </article>
+
+                <article class="course-card" data-course-card>
+                    <div class="course-top">
+                        <span class="course-code">ISCG7444</span>
+                        <span class="badge normal">In progress</span>
+                    </div>
+                    <h3>Cloud Application Design</h3>
+                    <p>
+                        Cloud architecture, design decisions, deployment, and system planning.
+                    </p>
+                    <div class="progress-area">
+                        <span>Progress</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill progress-7444"></div>
+                        </div>
+                    </div>
+                    <button class="open-course-btn" data-course="ISCG7444">Open course</button>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Tasks and resources -->
+        <section class="lower-layout">
+
+            <!-- Homework -->
+            <article class="panel-card">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">Track work</p>
+                        <h2>Upcoming Homework</h2>
+                    </div>
+                    <span class="mini-label">3 tasks</span>
+                </div>
+
+                <ul class="task-list">
+                    <li>
+                        <input type="checkbox" class="task-checkbox">
+                        <div>
+                            <strong>Read Topic 5 estimation slides</strong>
+                            <p>ISCG7427 · Due Monday</p>
+                        </div>
+                        <span class="badge due-soon">Due soon</span>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" class="task-checkbox">
+                        <div>
+                            <strong>Prepare stand-up progress update</strong>
+                            <p>ISCG7427 · Due Monday</p>
+                        </div>
+                        <span class="badge urgent">High priority</span>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" class="task-checkbox">
+                        <div>
+                            <strong>Review HTML/CSS basics</strong>
+                            <p>ISCG7420 · Due Friday</p>
+                        </div>
+                        <span class="badge normal">Upcoming</span>
+                    </li>
+                </ul>
+            </article>
+
+            <!-- Assignments -->
+            <article class="panel-card" id="assignmentPanel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">Due soon</p>
+                        <h2>Assignments</h2>
+                    </div>
+                    <span class="mini-label">2 items</span>
+                </div>
+
+                <ul class="task-list">
+                    <li>
+                        <input type="checkbox" class="task-checkbox">
+                        <div>
+                            <strong>Milestone 3 Sprint Planning</strong>
+                            <p>ISCG7427 · Due this week</p>
+                        </div>
+                        <span class="badge urgent">High priority</span>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" class="task-checkbox">
+                        <div>
+                            <strong>Prototype screenshots and evidence</strong>
+                            <p>ISCG7427 · Due next week</p>
+                        </div>
+                        <span class="badge due-soon">Due soon</span>
+                    </li>
+                </ul>
+            </article>
+
+            <!-- Important resources -->
+            <article class="panel-card">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">Lecturer marked</p>
+                        <h2>Important Resources</h2>
+                    </div>
+                    <span class="mini-label">4 resources</span>
+                </div>
+
+                <div class="resource-list">
+                    <button class="resource-item" data-resource="Topic 5 slides">
+                        <span>📄</span>
+                        <div>
+                            <strong>Topic 5 slides</strong>
+                            <p>Story points, planning poker, and task estimates</p>
+                        </div>
+                    </button>
+
+                    <button class="resource-item" data-resource="Acceptance criteria guide">
+                        <span>✅</span>
+                        <div>
+                            <strong>Acceptance criteria guide</strong>
+                            <p>Examples for checking when a story is complete</p>
+                        </div>
+                    </button>
+
+                    <button class="resource-item" data-resource="TDD notes">
+                        <span>🧪</span>
+                        <div>
+                            <strong>TDD notes</strong>
+                            <p>Expected vs actual outcome testing notes</p>
+                        </div>
+                    </button>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Message for planned (coming soon) outcome-->
+        <section class="message-box" id="messageBox">
+            Click something to see planned outcome.
+        </section>
+
+    </main>
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
