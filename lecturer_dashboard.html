@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Noodle | Lecturer Dashboard</title>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <!-- Top navigation bar -->
+    <header class="top-nav">
+        <div class="logo">
+            <span class="logo-mark">N</span>
+            <div>
+                <strong>Noodle</strong>
+                <small>Teaching resources, organised</small>
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#">Dashboard</a>
+            <a href="#resourceUploadForm">Upload</a>
+            <a href="#uploadedResourceList">Resources</a>
+            <a href="./student_dashboard.html">Student View</a>
+        </nav>
+
+        <div class="profile">
+            <span class="profile-circle">L</span>
+            <span>Lecturer</span>
+        </div>
+    </header>
+
+    <!-- Main dashboard -->
+    <main class="dashboard">
+
+        <!-- Welcome section -->
+        <section class="hero-card lecturer-hero">
+            <div class="hero-text">
+                <p class="eyebrow">Lecturer dashboard</p>
+                <h1>Upload course resources with clear descriptions</h1>
+                <p>
+                    Add a title, topic, resource link or file name, and a short description so
+                    students can understand why the resource matters before opening it.
+                </p>
+
+                <div class="hero-actions">
+                    <button id="jumpToUploadButton">Upload resource</button>
+                    <button class="secondary-button" id="viewStudentPreviewButton">View student preview</button>
+                </div>
+            </div>
+
+            <div class="today-focus">
+                <h2>Story 2 Focus</h2>
+                <ul>
+                    <li>
+                        <span class="dot urgent-dot"></span>
+                        Upload to a selected course topic
+                    </li>
+                    <li>
+                        <span class="dot warning-dot"></span>
+                        Add and edit a description
+                    </li>
+                    <li>
+                        <span class="dot calm-dot"></span>
+                        Show students the description first
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Summary cards -->
+        <section class="summary-grid lecturer-summary-grid">
+            <article class="summary-card">
+                <span class="summary-number" id="resourceCount">0</span>
+                <p>Uploaded resources</p>
+            </article>
+
+            <article class="summary-card">
+                <span class="summary-number">3</span>
+                <p>Available topics</p>
+            </article>
+
+            <article class="summary-card">
+                <span class="summary-number">1</span>
+                <p>Must-have story</p>
+            </article>
+
+            <article class="summary-card">
+                <span class="summary-number">3</span>
+                <p>Story points</p>
+            </article>
+        </section>
+
+        <!-- Upload form and uploaded resources -->
+        <section class="lecturer-layout">
+
+            <!-- Upload resource form -->
+            <article class="panel-card upload-panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">Resource upload</p>
+                        <h2>Add a Resource</h2>
+                    </div>
+                    <span class="mini-label">Must Have</span>
+                </div>
+
+                <form id="resourceUploadForm" class="resource-form">
+                    <label for="courseTopic">Course topic</label>
+                    <select id="courseTopic" required>
+                        <option value="">Select a topic...</option>
+                        <option value="Topic 4: User Stories and Backlog Refinement">Topic 4: User Stories and Backlog Refinement</option>
+                        <option value="Topic 5: Estimation and Planning Poker">Topic 5: Estimation and Planning Poker</option>
+                        <option value="Topic 6: Scrum, Stand-ups and Burndown">Topic 6: Scrum, Stand-ups and Burndown</option>
+                    </select>
+
+                    <label for="resourceTitle">Resource title</label>
+                    <input type="text" id="resourceTitle" placeholder="Example: Acceptance criteria guide" required>
+
+                    <label for="resourceFile">File name or resource link</label>
+                    <input type="text" id="resourceFile" placeholder="Example: acceptance-criteria-guide.pdf" required>
+
+                    <label for="resourceDescription">Resource description</label>
+                    <textarea id="resourceDescription" rows="5" placeholder="Explain why this resource is useful for students..." required></textarea>
+
+                    <button type="submit" id="saveResourceButton">Save resource</button>
+                    <button type="button" class="secondary-form-button" id="clearFormButton">Clear form</button>
+                </form>
+            </article>
+
+            <!-- Uploaded resources -->
+            <article class="panel-card resource-management-panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">Uploaded resources</p>
+                        <h2>Lecturer Resource List</h2>
+                    </div>
+                    <span class="mini-label" id="resourceListLabel">0 items</span>
+                </div>
+
+                <div class="resource-list managed-resource-list" id="uploadedResourceList">
+                    <!-- JavaScript adds uploaded resources here -->
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Student preview -->
+        <section class="section-block" id="studentPreviewPanel">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Student-facing preview</p>
+                    <h2>What students see before opening the resource</h2>
+                </div>
+                <span class="mini-label">Description visible first</span>
+            </div>
+
+            <div class="student-preview-grid" id="studentPreviewList">
+                <!-- JavaScript adds preview cards here -->
+            </div>
+        </section>
+
+        <!-- Acceptance criteria checklist -->
+        <section class="continue-card story-evidence-card">
+            <div>
+                <p class="eyebrow">Story 2 acceptance criteria covered</p>
+                <h2>Resource upload with descriptions</h2>
+                <p>
+                    This page supports selected course topics, resource title, file/link details,
+                    descriptions, editing, and a student-facing preview of the uploaded description.
+                </p>
+            </div>
+
+            <button id="showEvidenceButton">Show test evidence</button>
+        </section>
+
+        <!-- Message for planned outcome -->
+        <section class="message-box" id="messageBox">
+            Add a resource to see the lecturer and student preview update.
+        </section>
+
+    </main>
+
+    <!-- JavaScript file -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
